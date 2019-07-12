@@ -61,9 +61,9 @@ let translateTable = [
     "8": "---..",
     "9": "----.",
     "0": "-----",
-    " ": " / ", /* <- This is called when a space is entered in the input text, you can change it to whatever you want */
+    " ": " / ", // <- This is called when a space is entered in the input text, you can change it to whatever you want
 ]
-// Add to or change transation table to your liking to add support for more characters
+// Add to, or change 'translateTable' to your liking to add support for more characters
 
 
 func translating(englishInput: String) {
@@ -79,5 +79,5 @@ func translating(englishInput: String) {
     print(wordJoiner)
 }
 
-// enter the text you want to enter
+// enter the text you want to encode
 translating(englishInput: "the text you want to encode")
