@@ -69,6 +69,7 @@ let translateTable = [
 func translating(englishInput: String) {
     var offsetByNum = 0
     var wordJoiner = ""
+    if englishInput.count > 0 { 
     for _ in 1...englishInput.count {
         let indexOffset = englishInput.index(englishInput.startIndex, offsetBy: offsetByNum)
         let indexOffsetOutput =  String(englishInput[indexOffset])
@@ -78,6 +79,7 @@ func translating(englishInput: String) {
     }
     // word joiner is the output, make it do whatever you want
     print(wordJoiner)
+    }
 }
 
 // enter the text you want to encode
