@@ -76,6 +76,7 @@ func translating(englishInput: String) {
         wordJoiner += "\(translate)  "
         offsetByNum += 1
     }
+    // word joiner is the output, make it do whatever you want
     print(wordJoiner)
 }
 
