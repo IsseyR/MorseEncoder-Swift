@@ -73,7 +73,8 @@ func translating(englishInput: String) {
     for _ in 1...englishInput.count {
         let indexOffset = englishInput.index(englishInput.startIndex, offsetBy: offsetByNum)
         let indexOffsetOutput =  String(englishInput[indexOffset])
-        let translate = translateTable[indexOffsetOutput]!
+        // '#' called when unrecognised character is entered
+        let translate = translateTable[indexOffsetOutput] ?? "#"
         wordJoiner += "\(translate)  "
         offsetByNum += 1
     }
