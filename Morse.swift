@@ -1,30 +1,4 @@
 let translateTable = [
-    "A": ".-",
-    "B": "-...",
-    "C": "-.-.",
-    "D": "-..",
-    "E": ".",
-    "F": "..-.",
-    "G": "--.",
-    "H": "....",
-    "I": "..",
-    "J": ".---",
-    "K": "-.-",
-    "L": ".-..",
-    "M": "--",
-    "N": "-.",
-    "O": "---",
-    "P": ".--.",
-    "Q": "--.-",
-    "R": ".-.",
-    "S": "...",
-    "T": "-",
-    "U": "..-",
-    "V": "...-",
-    "W": ".--",
-    "X": "-..-",
-    "Y": "-.--",
-    "Z": "--..",
     "a": ".-",
     "b": "-...",
     "c": "-.-.",
@@ -65,14 +39,14 @@ let translateTable = [
 ]
 // Add to, or change 'translateTable' to your liking to add support for more characters
 
-
 func translating(englishInput: String) {
-    var offsetByNum = 0
-    var wordJoiner = ""
-    if englishInput.count > 0 { 
-    for _ in 1...englishInput.count {
-        let indexOffset = englishInput.index(englishInput.startIndex, offsetBy: offsetByNum)
-        let indexOffsetOutput =  String(englishInput[indexOffset])
+    var offsetByNum = Int()
+    var wordJoiner = String()
+    let text = englishInput.lowercased()
+    if text.count > 0 { 
+    for _ in 1...text.count {
+        let indexOffset = text.index(text.startIndex, offsetBy: offsetByNum)
+        let indexOffsetOutput =  String(text[indexOffset])
         // '#' called when unrecognised character is entered
         let translate = translateTable[indexOffsetOutput] ?? "#"
         wordJoiner += "\(translate)  "
